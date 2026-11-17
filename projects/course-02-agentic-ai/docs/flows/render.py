@@ -29,5 +29,8 @@ out.write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta nam
 <h2>What we agreed to test</h2><p>On the first shift, the agent investigates a fault. On the second, the fault returns. On the third, the same alert has a different cause. We compare two versions: one can use notes from earlier shifts and one cannot.</p>
 <p>For each case, we count how often the agent makes the right decision and can show why. Did the notes save a lookup? Did the agent see the log line that explained the fault? If it reused a saved answer, was that answer still accurate?</p>
 <p>We count the cost of saving, reading, and correcting notes across all three shifts. We reject a version if it leaks data, acts without permission, repeats an effect, or reports recovery without evidence.</p>
-<p>We agreed on the test. The other seven diagrams show ideas for review. We do not have results yet.</p></header><nav aria-label="Contents">''' + ' '.join(nav) + '</nav>' + ''.join(sections) + '</html>')
+<h2 id="missing-reading">When a reading is missing</h2>
+<p>If the incident cannot wait, hand it over immediately. Otherwise, retry a timeout once. Skip the retry if access is denied.</p>
+<p>If the reading is still missing, try one independent source. If it only repeats the alert, leave the gateway running. Tell the operator what is known, what is missing, and what to check next. Save no lesson about the cause.</p>
+<p>We agreed on this rule and the test. The other seven diagrams show ideas for review. We do not have results yet.</p></header><nav aria-label="Contents">''' + ' '.join(nav) + '</nav>' + ''.join(sections) + '</html>')
 print(out)
