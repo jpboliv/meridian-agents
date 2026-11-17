@@ -1,4 +1,10 @@
-# Generative AI Course
+# Meridian Agents
+
+How can an on-call agent use yesterday's incident to investigate faster without mistaking it for today's evidence?
+
+Start with the [project guide](projects/course-02-agentic-ai/README.md), [roadmap](ROADMAP.md), and [current focus](STATUS.md).
+
+## Generative AI course materials
 
 Working material for the Generative AI course. The repository grows session by
 session and keeps runnable examples, implementation challenges, and evaluation
