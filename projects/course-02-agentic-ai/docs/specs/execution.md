@@ -2,7 +2,7 @@
 
 ![Proposed flow](../flows/execution.svg)
 
-A missing reply does not mean the restart failed. Find the original receipt before deciding what work remains.
+If the agent loses the reply to a restart request, it reads the action record. The restart can succeed even when the reply never arrives.
 
 Draft for [issue 11](https://github.com/jpboliv/meridian-agents/issues/11). A restart takes effect just before the worker loses its response. A later worker sees an unfinished step.
 

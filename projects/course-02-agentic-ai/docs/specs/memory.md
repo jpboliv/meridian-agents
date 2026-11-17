@@ -2,7 +2,7 @@
 
 ![Proposed flow](../flows/memory.svg)
 
-Yesterday’s restart tells the next shift where to look. Today’s readings tell it whether the same explanation fits.
+We agreed to keep two records. The incident record says what happened. The lesson tells the next shift what to check. Today’s readings determine whether the same fix fits.
 
 Draft for [issue 6](https://github.com/jpboliv/meridian-agents/issues/6). A restart helped yesterday. Decide what to retain about the symptoms, instance, version, mitigation, and observed effect.
 

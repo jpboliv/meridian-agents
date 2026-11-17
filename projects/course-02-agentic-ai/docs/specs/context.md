@@ -2,7 +2,7 @@
 
 ![Proposed flow](../flows/context.svg)
 
-Keep the unusual log line and a way back to its source. A short summary helps only if the investigator can still find the clue.
+When many log lines repeat the same error, summarize them. Keep the unusual line and a link to the original log.
 
 Draft for [issue 5](https://github.com/jpboliv/meridian-agents/issues/5). One unusual log line explains a thousand similar errors. What survives when the context budget is full?
 

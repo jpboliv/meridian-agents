@@ -2,7 +2,7 @@
 
 ![Proposed flow](../flows/coordination.svg)
 
-Specialists return findings and sources. If their accounts disagree, the coordinator needs more evidence before asking anyone to change the system.
+Each specialist reports what they found and where they found it. If they disagree, the agent leading the investigation asks for more evidence before anyone changes the system.
 
 Draft for [issue 10](https://github.com/jpboliv/meridian-agents/issues/10). Two specialists report different causes. What evidence must the orchestrator request before it sends a remediation task?
 

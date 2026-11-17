@@ -12,7 +12,7 @@ digraph context {
   "Enough evidence?" -> "Read original source or report the gap" [label="no"];
 }
 digraph memory {
-  "Verified mitigation" -> "Store lesson with source and conditions" -> "Next shift recalls lesson";
+  "Verified mitigation" -> "Incident record: what happened" -> "Lesson: what to check next" -> "Next shift recalls lesson";
   "Next shift recalls lesson" -> "Do fresh readings support it?";
   "Do fresh readings support it?" -> "Investigate the affected instance" [label="yes"];
   "Do fresh readings support it?" -> "Investigate another cause" [label="no"];

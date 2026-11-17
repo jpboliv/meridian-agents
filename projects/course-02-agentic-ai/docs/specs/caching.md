@@ -2,7 +2,7 @@
 
 ![Proposed flow](../flows/caching.svg)
 
-A saved runbook can still be accurate after a deployment but describe the wrong version. Reuse depends on what changed and who is asking.
+A runbook gives instructions for a service. Before reusing a saved copy, make sure that it covers the current version and the reader can access it.
 
 Draft for [issue 7](https://github.com/jpboliv/meridian-agents/issues/7). A runbook stays the same while the deployed component changes. Its content can still be correct even when its selection is wrong.
 
