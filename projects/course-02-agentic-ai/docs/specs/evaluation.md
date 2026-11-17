@@ -10,6 +10,8 @@ Compare versions on the same starting state. Reset memory between independent tr
 
 ## Agreed metrics
 
+Include [the wrongly credited restart](../reference-incident.md#the-wrongly-credited-restart) as a separate memory correction case. Score the saved correction and the next shift’s decision separately.
+
 Report verified successes as passes out of runs for each case. A pass requires the expected decision, permitted effects, and evidence for the final report. When evidence is unavailable, an honest incomplete result can pass.
 
 | Question | Measurement |

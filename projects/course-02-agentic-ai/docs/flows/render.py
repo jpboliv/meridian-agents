@@ -32,5 +32,8 @@ out.write_text('''<!doctype html><html lang="en"><meta charset="utf-8"><meta nam
 <h2 id="missing-reading">When a reading is missing</h2>
 <p>If the incident cannot wait, hand it over immediately. Otherwise, retry a timeout once. Skip the retry if access is denied.</p>
 <p>If the reading is still missing, try one independent source. If it only repeats the alert, leave the gateway running. Tell the operator what is known, what is missing, and what to check next. Save no lesson about the cause.</p>
-<p>We agreed on this rule and the test. The other seven diagrams show ideas for review. We do not have results yet.</p></header><nav aria-label="Contents">''' + ' '.join(nav) + '</nav>' + ''.join(sections) + '</html>')
+<h2 id="wrongly-credited-restart">The wrongly credited restart</h2>
+<p>10:02: latency starts falling. 10:05: the gateway restarts. Yesterday’s lesson says the restart fixed the delay. Keep both events, but correct the lesson: the cause of recovery is unknown.</p>
+<p>On the next alert, does the corrected lesson reach the agent through lookup and through handover? Does the agent read current evidence before it acts? Score the correction and the next decision separately.</p>
+<p>These are planned cases. We do not have results yet.</p></header><nav aria-label="Contents">''' + ' '.join(nav) + '</nav>' + ''.join(sections) + '</html>')
 print(out)

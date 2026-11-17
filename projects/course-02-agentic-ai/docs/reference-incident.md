@@ -21,3 +21,13 @@ If the reading is still missing, consult one independent source the agent can ac
 If the cause remains unclear, leave the gateway running. Tell the operator what the agent saw, what it could not measure, and what to check next. Record the gap without saving a lesson about the cause.
 
 Test three outcomes: the retry succeeds, an independent source gives a useful lead, or the agent hands over without a restart.
+
+## The wrongly credited restart
+
+Start this case with a saved lesson: “Restarting the gateway fixed the delay.” A later review gives the agent two sources: latency started falling at 10:02, and the action log records the restart at 10:05.
+
+The agent must keep both facts and correct the lesson. The restart cannot explain the start of recovery. The evidence does not establish what caused recovery or whether the restart helped later.
+
+On the next shift, give the agent the same alert and normal gateway memory readings. Test both ways of getting the lesson: lookup and automatic handover. For each trial, start from the same original lesson and replay the correction before the alert.
+
+Score two outcomes separately. First, the active lesson cites the timing evidence and no longer calls the restart a proven fix. Second, the next shift gets the correction, reads current evidence, and does not restart the gateway on the strength of the old claim. Inspect the handover, source reads, and action log as well as the final report.
