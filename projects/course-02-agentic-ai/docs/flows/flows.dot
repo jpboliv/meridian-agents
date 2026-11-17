@@ -1,0 +1,63 @@
+digraph prompts {
+  "Role and task" -> "Build prompt";
+  "Ticket text, labeled as evidence" -> "Build prompt";
+  "Build prompt" -> "Model response" -> "Valid report?";
+  "Valid report?" -> "Return report with prompt revision" [label="yes"];
+  "Valid report?" -> "Retry within limit or stop" [label="no"];
+}
+digraph context {
+  "Incident brief" -> "Request relevant evidence" -> "Group repeated log lines";
+  "Group repeated log lines" -> "Keep unusual line and source reference" -> "Enough evidence?";
+  "Enough evidence?" -> "Pass evidence to decision maker" [label="yes"];
+  "Enough evidence?" -> "Read original source or report the gap" [label="no"];
+}
+digraph memory {
+  "Verified mitigation" -> "Store lesson with source and conditions" -> "Next shift recalls lesson";
+  "Next shift recalls lesson" -> "Do fresh readings support it?";
+  "Do fresh readings support it?" -> "Investigate the affected instance" [label="yes"];
+  "Do fresh readings support it?" -> "Investigate another cause" [label="no"];
+  "Investigate another cause" -> "Review lesson against new evidence";
+}
+digraph caching {
+  "Request runbook" -> "Read current component version" -> "Matching version, scope, and valid entry?";
+  "Matching version, scope, and valid entry?" -> "Reuse runbook" [label="yes"];
+  "Matching version, scope, and valid entry?" -> "Fetch applicable runbook" [label="no"];
+  "Reuse runbook" -> "Use runbook to guide investigation";
+  "Fetch applicable runbook" -> "Use runbook to guide investigation";
+}
+digraph permissions {
+  "Request access or action" -> "Does requester have permission?";
+  "Does requester have permission?" -> "Deny without effect" [label="no"];
+  "Does requester have permission?" -> "Is approval required?" [label="yes"];
+  "Is approval required?" -> "Allow scoped operation" [label="no"];
+  "Is approval required?" -> "Valid approval for this action and target?" [label="yes"];
+  "Valid approval for this action and target?" -> "Allow scoped operation" [label="yes"];
+  "Valid approval for this action and target?" -> "Stop and request approval" [label="no"];
+}
+digraph coordination {
+  "Operator request" -> "Orchestrator assigns tasks";
+  "Orchestrator assigns tasks" -> "Infrastructure findings";
+  "Orchestrator assigns tasks" -> "Application findings";
+  "Infrastructure findings" -> "Enough consistent evidence?";
+  "Application findings" -> "Enough consistent evidence?";
+  "Enough consistent evidence?" -> "Clarify or escalate" [label="no"];
+  "Enough consistent evidence?" -> "Send bounded remediation task" [label="yes"];
+  "Send bounded remediation task" -> "Verify effect from fresh readings";
+}
+digraph execution {
+  "Restore unfinished step" -> "Look up original action receipt" -> "Effect recorded?";
+  "Effect recorded?" -> "Read fresh evidence of outcome" [label="yes"];
+  "Effect recorded?" -> "Stop and reconcile" [label="unknown"];
+  "Effect recorded?" -> "Recheck need, permission, and approval" [label="confirmed absent"];
+  "Recheck need, permission, and approval" -> "Act using original key" [label="still authorized and needed"];
+  "Act using original key" -> "Read fresh evidence of outcome";
+}
+digraph evaluation {
+  "Same three shifts and starting state" -> "Memory off";
+  "Same three shifts and starting state" -> "Memory on";
+  "Memory off" -> "Score each case from outcomes and traces";
+  "Memory on" -> "Score each case from outcomes and traces";
+  "Score each case from outcomes and traces" -> "Any adoption blocker?";
+  "Any adoption blocker?" -> "Reject version" [label="yes"];
+  "Any adoption blocker?" -> "Compare success, evidence, and full-shift cost" [label="no"];
+}

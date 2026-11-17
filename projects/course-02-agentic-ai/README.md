@@ -13,6 +13,14 @@ Start with the [project goals](docs/project.md) and [reference incident](docs/re
 
 ## Design index
 
+Each specification includes a diagram. To refresh the diagrams and offline decision report, install Graphviz and run this command from the repository root:
+
+```sh
+python3 projects/course-02-agentic-ai/docs/flows/render.py
+```
+
+Open `../meridian-report/index.html`. Edit `docs/flows/flows.dot` to change a diagram and the corresponding specification to change its caption.
+
 - [Architecture and information ownership](docs/architecture.md)
 - [Prompts](docs/specs/prompts.md) and [context](docs/specs/context.md)
 - [Memory](docs/specs/memory.md) and [caching](docs/specs/caching.md)

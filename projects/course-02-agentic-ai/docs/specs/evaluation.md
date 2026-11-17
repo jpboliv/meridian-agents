@@ -1,5 +1,9 @@
 # Evaluation contract
 
+![Agreed comparison](../flows/evaluation.svg)
+
+Run the same three shifts with memory off and on. Count verified successes per case before comparing how much work each version saved.
+
 Draft for [issue 8](https://github.com/jpboliv/meridian-agents/issues/8). A faster run restarts the wrong instance. Decide which failures rule out adoption even when average cost falls.
 
 Compare versions on the same starting state. Reset memory between independent trials and preserve it across shifts within a trial. Record per-case outcomes, effects, source calls, and model usage.
