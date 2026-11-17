@@ -8,6 +8,8 @@ Draft for [issue 2](https://github.com/jpboliv/meridian-agents/issues/2).
 
 ## Agreed handover
 
+Start each shift with a fresh conversation and the same alert: “The order gateway is slow.” Each version can request current readings. Compare no prior lesson, lesson lookup, and the same lesson supplied at handover. Only the evaluator sees the known cause and expected outcome. Between independent trials, reset the simulator, memory, and cache to the same starting state.
+
 The incident record says what happened: “Memory use rose on gateway instance 2. After its restart, latency returned to normal.” The lesson says what to check next: “When the gateway slows down, compare memory use across instances.”
 
 On the third shift, memory use is normal across the gateway instances and the database link is slow. Keep the first incident record. Use the fresh readings to investigate the link.
